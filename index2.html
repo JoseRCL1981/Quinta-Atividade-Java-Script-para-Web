@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <span>Total da Compra</span>
+<input type="number" id="compra"><br>
+
+<button onclick="calcularDesconto('silver')"> Silver </button><br>
+<button onclick="calcularDesconto('gold')"> Gold </button><br>
+<button onclick="calcularDesconto('platinum')"> Platinum </button><br>
+
+<h2 id="resultado"></h2>
+
+<script>
+function calcularDesconto(tipoAssinatura) {
+  var valor = parseFloat(document.getElementById('compra').value);
+  var desconto = 0;
+
+  switch (tipoAssinatura) {
+    case "silver":
+      desconto = 0.05;
+      break;
+    case "gold":
+      desconto = 0.10;
+      break;
+    case "platinum":
+      desconto = 0.15;
+      break;
+    default:
+      desconto = 0;
+  }
+
+  var valorFinal = valor - (valor * desconto);
+
+  var elementoResultado = document.getElementById('resultado');
+  elementoResultado.textContent = "Valor Final: " + valorFinal.toFixed(2);
+}
+
+
+
+</script>
+
+<!-- // ************************************************************************ -->
+
+        <span>Idade do usuário</span>
+        <input type="number" id="idade"><br>
+
+        <button onclick="suaIdade()">Idade</button>
+
+        <h2 id="resultado"></h2>
+
+<script>
+        function suaIdade() {
+        var idade = parseInt(document.getElementById('idade').value);
+
+        if (idade >= 18) {
+        document.getElementById('resultado').textContent = "Você é maior de idade.";
+  }     
+        else {
+        document.getElementById('resultado').textContent = "Você é menor de idade.";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Título </h1>
+    <p> Primeiro Número</p>
+
+    <input type="number" id="num1"></input>
+   
+    <p>Segundo Numero</p>
+    <input type="number" id="num2"></input><br>
+
+    <button onclick="somar()"> Somar </button><br>
+    <button onclick="subtracao()"> Subtrair </button><br>
+    <button onclick="multiplicacao()"> Multiplicar </button><br>
+    <button onclick="divisao()"> Dividir </button><br>
+    <button onclick="resto()"> Resto </button><br>
+
+    <h2 id="resultado"></h2>
+
+    <script>
+        function somar(){
+            var valor1 = document.getElementById('num1').value;
+            var valor2 = document.getElementById('num2').value;
+
+            var numero1 = parseFloat(valor1)
+            var numero2 = parseFloat(valor2)
+            var soma = numero1 + numero2
+
+            var elementoResultado = document.getElementById('resultado')
+            elementoResultado.textContent = " Total: " + soma;
+    
+
+        }
+   
+        function subtracao(){
+            var valor1 = document.getElementById('num1').value;
+            var valor2 = document.getElementById('num2').value;
+
+            var numero1 = parseFloat(valor1)
+            var numero2 = parseFloat(valor2)
+            var subtrair = numero1 - numero2
+
+            var elementoResultado = document.getElementById('resultado')
+            elementoResultado.textContent = " Total: " + subtrair;
+
+
+
+        }
+        function multiplicacao(){
+            var valor1 = document.getElementById('num1').value;
+            var valor2 = document.getElementById('num2').value;
+
+            var numero1 = parseFloat(valor1)
+            var numero2 = parseFloat(valor2)
+            var multiplicar = numero1 * numero2
+
+            var elementoResultado = document.getElementById('resultado')
+            elementoResultado.textContent = " Total: " + multiplicar;
+
+         }
+
+
+        function divisao(){
+            var valor1 = document.getElementById('num1').value;
+            var valor2 = document.getElementById('num2').value;
+
+            var numero1 = parseFloat(valor1)
+            var numero2 = parseFloat(valor2)
+            var dividir = numero1 / numero2
+
+            var elementoResultado = document.getElementById('resultado')
+            elementoResultado.textContent = " Total: " + dividir;
+
+        }
+        function resto() {
+            var valor1 = document.getElementById('num1').value;
+            var valor2 = document.getElementById('num2').value;
+
+             var numero1 = parseFloat(valor1)
+             var numero2 = parseFloat(valor2)
+             var  restante= numero1 % numero2
+        
+
+            var elementoResultado = document.getElementById('resultado')
+            elementoResultado.textContent = " Total: " + restante;
+} 
+
+
+    </script>
+
+
+
+<!-- ************************************************************************************************** -->
+
+    <span>Primeiro Número</span>
+    <input type="number" id="num1"></input><br>
+   
+    <span>Segundo Número</span>
+    <input type="number" id="num2"></input><br>
+
+    <span>Terceiro Número</span>
+    <input type="number" id="num3"></input><br>
+
+    <button onclick="media()"> Média </button><br>
+   
+
+    <h2 id="resultado"></h2>
+
+    <script>
+        function media(){
+            var valor1 = document.getElementById('num1').value;
+            var valor2 = document.getElementById('num2').value;
+            var valor3 = document.getElementById('num3').value;
+
+            var numero1 = parseFloat(valor1)
+            var numero2 = parseFloat(valor2)
+            var numero3 = parseFloat(valor3)
+            var mediatotal= (numero1 + numero2 + numero3) / 3
+
+            var elementoResultado = document.getElementById('resultado')
+            elementoResultado.textContent = " Média: " + mediatotal;
+    
+
+        }
+
+
+</script>
+
+</body>
+
+</html>
